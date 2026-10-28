@@ -1,0 +1,2112 @@
+{
+ "counts": {
+  "parishes_all": 10699,
+  "parishes_sample": 9674,
+  "incidents_all": 3117,
+  "incidents_sample": 2975,
+  "machine_attacks_all": 529,
+  "machine_attacks_sample": 508,
+  "other_incidents_all": 2588,
+  "riot_parishes_all": 1479,
+  "riot_parishes_sample": 1400,
+  "riot_parish_share_sample": 0.1447,
+  "machines_all": 641,
+  "machines_sample": 602,
+  "machine_parishes_all": 544,
+  "machine_parishes_sample": 511,
+  "machine_parish_share_sample": 0.0528,
+  "machine_records": 635,
+  "machine_records_ads": 548,
+  "machine_records_gva": 87,
+  "pre1830_episodes": 679,
+  "pre1830_attacks": 69,
+  "pre1830_arsons": 610,
+  "pre1830_first_year": 1765,
+  "pre1830_last_year": 1829,
+  "incidents_to_april_1831_all": 2478,
+  "attack_share_of_incidents": 0.1697,
+  "max_incidents_parish": 26
+ },
+ "top_parishes": [
+  {
+   "parish": "Whitchurch",
+   "county": "Shropshire",
+   "incidents": 26,
+   "machines": 0
+  },
+  {
+   "parish": "Chipping Wycombe",
+   "county": "Buckinghamshire",
+   "incidents": 21,
+   "machines": 0
+  },
+  {
+   "parish": "Dover",
+   "county": "Kent",
+   "incidents": 20,
+   "machines": 0
+  },
+  {
+   "parish": "Battle",
+   "county": "Sussex",
+   "incidents": 16,
+   "machines": 0
+  },
+  {
+   "parish": "Goudhurst",
+   "county": "Kent",
+   "incidents": 16,
+   "machines": 0
+  },
+  {
+   "parish": "Kintbury",
+   "county": "Berkshire",
+   "incidents": 15,
+   "machines": 0
+  },
+  {
+   "parish": "Aldbourne",
+   "county": "Wiltshire",
+   "incidents": 15,
+   "machines": 0
+  },
+  {
+   "parish": "Burghclere",
+   "county": "Hampshire",
+   "incidents": 14,
+   "machines": 0
+  }
+ ],
+ "repro": {
+  "published": {
+   "n": 9674,
+   "preriots": 0.067,
+   "swing": 0.308,
+   "thresh": 0.062,
+   "ols1_thresh": 0.389,
+   "ols1_se": 0.071,
+   "iv7_thresh": 6.361,
+   "iv7_se": 1.616,
+   "fs_heavy": -0.034,
+   "rf_heavy": -0.218,
+   "period_means": [
+    0.001,
+    0.001,
+    0.009,
+    0.055,
+    0.176
+   ]
+  },
+  "n": 9674,
+  "preriots": 0.067,
+  "swing": 0.308,
+  "thresh": 0.062,
+  "ols1_thresh": 0.389,
+  "ols1_se": 0.071,
+  "fs_heavy": -0.034,
+  "rf_heavy": -0.218,
+  "iv7_thresh": 6.361,
+  "iv7_se": 1.616,
+  "iv_n": 9674,
+  "period_means": [
+   0.001,
+   0.001,
+   0.009,
+   0.055,
+   0.176
+  ]
+ },
+ "machines": {
+  "riot_share_with": 0.2701,
+  "riot_share_without": 0.1377,
+  "ratio": 1.96,
+  "n_with": 511,
+  "n_without": 9163,
+  "incidents_mean_with": 0.714,
+  "incidents_mean_without": 0.285,
+  "attack_share_with": 0.0685,
+  "attack_share_without": 0.0295,
+  "attack_ratio": 2.32,
+  "other_share_with": 0.2505,
+  "other_share_without": 0.1267,
+  "riot_parishes_with_machine": 138,
+  "riot_parishes_without_machine": 1262,
+  "riot_parishes_without_machine_share": 0.9014,
+  "machine_parishes_quiet_share": 0.7299,
+  "by_count": [
+   {
+    "label": "0",
+    "n": 9163,
+    "riot_share": 0.1377,
+    "incidents_mean": 0.285
+   },
+   {
+    "label": "1",
+    "n": 439,
+    "riot_share": 0.2415,
+    "incidents_mean": 0.61
+   },
+   {
+    "label": "2 or more",
+    "n": 72,
+    "riot_share": 0.4444,
+    "incidents_mean": 1.347
+   }
+  ],
+  "regions_higher_with": 4,
+  "gap": 0.1324
+ },
+ "regions": [
+  {
+   "region": "South-East",
+   "n": 3711,
+   "n_with": 321,
+   "riot_share_with": 0.3364,
+   "riot_share_without": 0.2395,
+   "incidents": 2140,
+   "machines": 391,
+   "riot_share": 0.2479
+  },
+  {
+   "region": "North-West",
+   "n": 1173,
+   "n_with": 20,
+   "riot_share_with": 0.3,
+   "riot_share_without": 0.1206,
+   "incidents": 267,
+   "machines": 20,
+   "riot_share": 0.1236
+  },
+  {
+   "region": "North-East",
+   "n": 1048,
+   "n_with": 39,
+   "riot_share_with": 0.2308,
+   "riot_share_without": 0.0833,
+   "incidents": 153,
+   "machines": 43,
+   "riot_share": 0.0887
+  },
+  {
+   "region": "South-West",
+   "n": 2659,
+   "n_with": 111,
+   "riot_share_with": 0.1351,
+   "riot_share_without": 0.0828,
+   "incidents": 394,
+   "machines": 125,
+   "riot_share": 0.085
+  },
+  {
+   "region": "Wales",
+   "n": 1083,
+   "n_with": 20,
+   "riot_share_with": 0.0,
+   "riot_share_without": 0.0151,
+   "incidents": 21,
+   "machines": 23,
+   "riot_share": 0.0148
+  }
+ ],
+ "neighbours": {
+  "radius_km": 10,
+  "n_pairs": 511,
+  "machine_riot_share": 0.2701,
+  "neighbour_riot_share": 0.172,
+  "diff": 0.0981,
+  "ci_lo": 0.0612,
+  "ci_hi": 0.1355,
+  "mean_neighbours": 22.2
+ },
+ "gradients": {
+  "enclosures": {
+   "key": "enclosures",
+   "label": "Common land enclosed by 1820 (district)",
+   "unit": "%",
+   "n": 6715,
+   "quantiles": 5,
+   "rows": [
+    {
+     "q": 1,
+     "lo": 0.0,
+     "hi": 0.0,
+     "mean": 0.0,
+     "n": 1343,
+     "riot_share": 0.1631,
+     "machine_share": 0.0454,
+     "incidents_mean": 0.295
+    },
+    {
+     "q": 2,
+     "lo": 0.0,
+     "hi": 0.667,
+     "mean": 0.18,
+     "n": 1343,
+     "riot_share": 0.1593,
+     "machine_share": 0.0469,
+     "incidents_mean": 0.382
+    },
+    {
+     "q": 3,
+     "lo": 0.667,
+     "hi": 1.756,
+     "mean": 1.14,
+     "n": 1343,
+     "riot_share": 0.1593,
+     "machine_share": 0.0752,
+     "incidents_mean": 0.345
+    },
+    {
+     "q": 4,
+     "lo": 1.756,
+     "hi": 4.13,
+     "mean": 2.9,
+     "n": 1343,
+     "riot_share": 0.1742,
+     "machine_share": 0.0715,
+     "incidents_mean": 0.36
+    },
+    {
+     "q": 5,
+     "lo": 4.13,
+     "hi": 28.459,
+     "mean": 9.398,
+     "n": 1343,
+     "riot_share": 0.1772,
+     "machine_share": 0.0462,
+     "incidents_mean": 0.343
+    }
+   ],
+   "note": "District estimate from Gonner (1912), only districts he covers",
+   "top_minus_bottom": 0.0141,
+   "spearman": 0.017,
+   "spearman_p": 0.1545,
+   "spearman_any": 0.017,
+   "spearman_any_p": 0.1522,
+   "coverage": 0.694
+  },
+  "poor": {
+   "key": "GENER_P01",
+   "label": "Poor rates per head, 1801",
+   "unit": "",
+   "n": 1251,
+   "quantiles": 5,
+   "rows": [
+    {
+     "q": 1,
+     "lo": 0.016,
+     "hi": 0.358,
+     "mean": 0.23,
+     "n": 251,
+     "riot_share": 0.1394,
+     "machine_share": 0.0797,
+     "incidents_mean": 0.263
+    },
+    {
+     "q": 2,
+     "lo": 0.358,
+     "hi": 0.518,
+     "mean": 0.436,
+     "n": 250,
+     "riot_share": 0.168,
+     "machine_share": 0.072,
+     "incidents_mean": 0.3
+    },
+    {
+     "q": 3,
+     "lo": 0.518,
+     "hi": 0.743,
+     "mean": 0.618,
+     "n": 250,
+     "riot_share": 0.26,
+     "machine_share": 0.112,
+     "incidents_mean": 0.648
+    },
+    {
+     "q": 4,
+     "lo": 0.746,
+     "hi": 1.0,
+     "mean": 0.875,
+     "n": 250,
+     "riot_share": 0.192,
+     "machine_share": 0.052,
+     "incidents_mean": 0.552
+    },
+    {
+     "q": 5,
+     "lo": 1.0,
+     "hi": 5.0,
+     "mean": 1.317,
+     "n": 250,
+     "riot_share": 0.34,
+     "machine_share": 0.064,
+     "incidents_mean": 1.032
+    }
+   ],
+   "note": "Only parishes answering the 1834 Poor Law inquiry",
+   "top_minus_bottom": 0.2006,
+   "spearman": 0.158,
+   "spearman_p": 0.0,
+   "spearman_any": 0.149,
+   "spearman_any_p": 0.0,
+   "coverage": 0.129
+  },
+  "unemp": {
+   "key": "u_w",
+   "label": "Winter unemployment among farm workers, 1834",
+   "unit": "%",
+   "n": 595,
+   "quantiles": 4,
+   "rows": [
+    {
+     "q": 1,
+     "lo": 0.0,
+     "hi": 0.0,
+     "mean": 0.0,
+     "n": 149,
+     "riot_share": 0.1208,
+     "machine_share": 0.047,
+     "incidents_mean": 0.161
+    },
+    {
+     "q": 2,
+     "lo": 0.0,
+     "hi": 0.1,
+     "mean": 0.047,
+     "n": 149,
+     "riot_share": 0.2685,
+     "machine_share": 0.094,
+     "incidents_mean": 0.752
+    },
+    {
+     "q": 3,
+     "lo": 0.1,
+     "hi": 0.189,
+     "mean": 0.142,
+     "n": 148,
+     "riot_share": 0.3176,
+     "machine_share": 0.0946,
+     "incidents_mean": 0.757
+    },
+    {
+     "q": 4,
+     "lo": 0.189,
+     "hi": 1.0,
+     "mean": 0.325,
+     "n": 149,
+     "riot_share": 0.3154,
+     "machine_share": 0.1074,
+     "incidents_mean": 0.993
+    }
+   ],
+   "note": "Reported in 1834, after the riots; only parishes that answered",
+   "top_minus_bottom": 0.1946,
+   "spearman": 0.197,
+   "spearman_p": 0.0,
+   "spearman_any": 0.19,
+   "spearman_any_p": 0.0,
+   "coverage": 0.062
+  },
+  "wheat": {
+   "key": "whe_p",
+   "label": "Average wheat price at the nearest market, 1820s",
+   "unit": "",
+   "n": 9625,
+   "quantiles": 5,
+   "rows": [
+    {
+     "q": 1,
+     "lo": 6.395,
+     "hi": 7.197,
+     "mean": 6.95,
+     "n": 1925,
+     "riot_share": 0.1569,
+     "machine_share": 0.0675,
+     "incidents_mean": 0.295
+    },
+    {
+     "q": 2,
+     "lo": 7.197,
+     "hi": 7.488,
+     "mean": 7.33,
+     "n": 1925,
+     "riot_share": 0.1351,
+     "machine_share": 0.0649,
+     "incidents_mean": 0.268
+    },
+    {
+     "q": 3,
+     "lo": 7.488,
+     "hi": 7.726,
+     "mean": 7.601,
+     "n": 1925,
+     "riot_share": 0.1995,
+     "machine_share": 0.0618,
+     "incidents_mean": 0.553
+    },
+    {
+     "q": 4,
+     "lo": 7.726,
+     "hi": 8.485,
+     "mean": 8.048,
+     "n": 1925,
+     "riot_share": 0.1039,
+     "machine_share": 0.0431,
+     "incidents_mean": 0.186
+    },
+    {
+     "q": 5,
+     "lo": 8.485,
+     "hi": 9.553,
+     "mean": 8.77,
+     "n": 1925,
+     "riot_share": 0.1319,
+     "machine_share": 0.0281,
+     "incidents_mean": 0.243
+    }
+   ],
+   "note": "Market-town price, shared by all parishes near that market",
+   "top_minus_bottom": -0.025,
+   "spearman": -0.02,
+   "spearman_p": 0.046,
+   "spearman_any": -0.02,
+   "spearman_any_p": 0.0487,
+   "coverage": 0.995
+  },
+  "agri": {
+   "key": "agri_share",
+   "label": "Share of workers in agriculture, 1801",
+   "unit": "%",
+   "n": 9674,
+   "quantiles": 5,
+   "rows": [
+    {
+     "q": 1,
+     "lo": 0.0,
+     "hi": 0.174,
+     "mean": 0.097,
+     "n": 1935,
+     "riot_share": 0.2181,
+     "machine_share": 0.0775,
+     "incidents_mean": 0.51
+    },
+    {
+     "q": 2,
+     "lo": 0.174,
+     "hi": 0.256,
+     "mean": 0.218,
+     "n": 1935,
+     "riot_share": 0.1561,
+     "machine_share": 0.0465,
+     "incidents_mean": 0.314
+    },
+    {
+     "q": 3,
+     "lo": 0.256,
+     "hi": 0.367,
+     "mean": 0.303,
+     "n": 1934,
+     "riot_share": 0.1231,
+     "machine_share": 0.0414,
+     "incidents_mean": 0.225
+    },
+    {
+     "q": 4,
+     "lo": 0.367,
+     "hi": 0.626,
+     "mean": 0.475,
+     "n": 1935,
+     "riot_share": 0.107,
+     "machine_share": 0.0527,
+     "incidents_mean": 0.227
+    },
+    {
+     "q": 5,
+     "lo": 0.627,
+     "hi": 1.0,
+     "mean": 0.836,
+     "n": 1935,
+     "riot_share": 0.1194,
+     "machine_share": 0.046,
+     "incidents_mean": 0.262
+    }
+   ],
+   "note": "",
+   "top_minus_bottom": -0.0987,
+   "spearman": -0.106,
+   "spearman_p": 0.0,
+   "spearman_any": -0.105,
+   "spearman_any_p": 0.0,
+   "coverage": 1.0
+  },
+  "heavy": {
+   "key": "heavysh",
+   "label": "Share of the parish on heavy clay soil",
+   "unit": "%",
+   "n": 9674,
+   "quantiles": 5,
+   "rows": [
+    {
+     "q": 1,
+     "lo": 0.0,
+     "hi": 0.076,
+     "mean": 0.011,
+     "n": 1935,
+     "riot_share": 0.155,
+     "machine_share": 0.0651,
+     "incidents_mean": 0.315
+    },
+    {
+     "q": 2,
+     "lo": 0.076,
+     "hi": 0.394,
+     "mean": 0.238,
+     "n": 1935,
+     "riot_share": 0.1948,
+     "machine_share": 0.063,
+     "incidents_mean": 0.504
+    },
+    {
+     "q": 3,
+     "lo": 0.394,
+     "hi": 0.681,
+     "mean": 0.541,
+     "n": 1934,
+     "riot_share": 0.1536,
+     "machine_share": 0.0527,
+     "incidents_mean": 0.323
+    },
+    {
+     "q": 4,
+     "lo": 0.681,
+     "hi": 0.929,
+     "mean": 0.807,
+     "n": 1935,
+     "riot_share": 0.1178,
+     "machine_share": 0.0439,
+     "incidents_mean": 0.224
+    },
+    {
+     "q": 5,
+     "lo": 0.93,
+     "hi": 1.0,
+     "mean": 0.988,
+     "n": 1935,
+     "riot_share": 0.1023,
+     "machine_share": 0.0393,
+     "incidents_mean": 0.171
+    }
+   ],
+   "note": "Caprettini and Voth's instrument: heavy soils suited threshing machines less",
+   "top_minus_bottom": -0.0527,
+   "spearman": -0.076,
+   "spearman_p": 0.0,
+   "spearman_any": -0.075,
+   "spearman_any_p": 0.0,
+   "coverage": 1.0
+  }
+ },
+ "bands": {
+  "london": {
+   "label": "Distance from London (km)",
+   "rows": [
+    {
+     "lo": 0,
+     "hi": 25,
+     "n": 203,
+     "riot_share": 0.1675,
+     "machine_share": 0.064,
+     "incidents_mean": 0.34
+    },
+    {
+     "lo": 25,
+     "hi": 50,
+     "n": 421,
+     "riot_share": 0.2257,
+     "machine_share": 0.0309,
+     "incidents_mean": 0.575
+    },
+    {
+     "lo": 50,
+     "hi": 75,
+     "n": 818,
+     "riot_share": 0.2323,
+     "machine_share": 0.0342,
+     "incidents_mean": 0.529
+    },
+    {
+     "lo": 75,
+     "hi": 100,
+     "n": 1032,
+     "riot_share": 0.2374,
+     "machine_share": 0.062,
+     "incidents_mean": 0.616
+    },
+    {
+     "lo": 100,
+     "hi": 125,
+     "n": 857,
+     "riot_share": 0.2182,
+     "machine_share": 0.0712,
+     "incidents_mean": 0.53
+    },
+    {
+     "lo": 125,
+     "hi": 150,
+     "n": 993,
+     "riot_share": 0.1541,
+     "machine_share": 0.0856,
+     "incidents_mean": 0.288
+    },
+    {
+     "lo": 150,
+     "hi": 175,
+     "n": 1141,
+     "riot_share": 0.1744,
+     "machine_share": 0.0666,
+     "incidents_mean": 0.313
+    },
+    {
+     "lo": 175,
+     "hi": 200,
+     "n": 1042,
+     "riot_share": 0.1094,
+     "machine_share": 0.0432,
+     "incidents_mean": 0.185
+    },
+    {
+     "lo": 200,
+     "hi": 225,
+     "n": 726,
+     "riot_share": 0.0758,
+     "machine_share": 0.0207,
+     "incidents_mean": 0.114
+    },
+    {
+     "lo": 225,
+     "hi": 250,
+     "n": 473,
+     "riot_share": 0.0782,
+     "machine_share": 0.0507,
+     "incidents_mean": 0.173
+    },
+    {
+     "lo": 250,
+     "hi": 275,
+     "n": 439,
+     "riot_share": 0.0843,
+     "machine_share": 0.0638,
+     "incidents_mean": 0.125
+    },
+    {
+     "lo": 275,
+     "hi": 300,
+     "n": 470,
+     "riot_share": 0.0489,
+     "machine_share": 0.0277,
+     "incidents_mean": 0.068
+    },
+    {
+     "lo": 300,
+     "hi": 325,
+     "n": 329,
+     "riot_share": 0.0334,
+     "machine_share": 0.0517,
+     "incidents_mean": 0.049
+    },
+    {
+     "lo": 325,
+     "hi": 350,
+     "n": 301,
+     "riot_share": 0.0233,
+     "machine_share": 0.0266,
+     "incidents_mean": 0.03
+    },
+    {
+     "lo": 350,
+     "hi": 600,
+     "n": 429,
+     "riot_share": 0.0303,
+     "machine_share": 0.049,
+     "incidents_mean": 0.065
+    }
+   ]
+  },
+  "elham": {
+   "label": "Distance from Elham, Kent (km)",
+   "rows": [
+    {
+     "lo": 0,
+     "hi": 25,
+     "n": 147,
+     "riot_share": 0.4014,
+     "machine_share": 0.0272,
+     "incidents_mean": 1.245
+    },
+    {
+     "lo": 25,
+     "hi": 50,
+     "n": 138,
+     "riot_share": 0.4058,
+     "machine_share": 0.0145,
+     "incidents_mean": 1.239
+    },
+    {
+     "lo": 50,
+     "hi": 75,
+     "n": 232,
+     "riot_share": 0.2672,
+     "machine_share": 0.0259,
+     "incidents_mean": 0.75
+    },
+    {
+     "lo": 75,
+     "hi": 100,
+     "n": 441,
+     "riot_share": 0.1497,
+     "machine_share": 0.0431,
+     "incidents_mean": 0.277
+    },
+    {
+     "lo": 100,
+     "hi": 125,
+     "n": 588,
+     "riot_share": 0.2058,
+     "machine_share": 0.0629,
+     "incidents_mean": 0.384
+    },
+    {
+     "lo": 125,
+     "hi": 150,
+     "n": 680,
+     "riot_share": 0.1897,
+     "machine_share": 0.0941,
+     "incidents_mean": 0.397
+    },
+    {
+     "lo": 150,
+     "hi": 175,
+     "n": 803,
+     "riot_share": 0.2279,
+     "machine_share": 0.0797,
+     "incidents_mean": 0.497
+    },
+    {
+     "lo": 175,
+     "hi": 200,
+     "n": 826,
+     "riot_share": 0.2736,
+     "machine_share": 0.0654,
+     "incidents_mean": 0.653
+    },
+    {
+     "lo": 200,
+     "hi": 225,
+     "n": 673,
+     "riot_share": 0.1738,
+     "machine_share": 0.0624,
+     "incidents_mean": 0.379
+    },
+    {
+     "lo": 225,
+     "hi": 250,
+     "n": 882,
+     "riot_share": 0.1122,
+     "machine_share": 0.051,
+     "incidents_mean": 0.188
+    },
+    {
+     "lo": 250,
+     "hi": 275,
+     "n": 902,
+     "riot_share": 0.0998,
+     "machine_share": 0.0477,
+     "incidents_mean": 0.165
+    },
+    {
+     "lo": 275,
+     "hi": 300,
+     "n": 747,
+     "riot_share": 0.075,
+     "machine_share": 0.0241,
+     "incidents_mean": 0.115
+    },
+    {
+     "lo": 300,
+     "hi": 325,
+     "n": 550,
+     "riot_share": 0.0745,
+     "machine_share": 0.0491,
+     "incidents_mean": 0.125
+    },
+    {
+     "lo": 325,
+     "hi": 350,
+     "n": 487,
+     "riot_share": 0.0842,
+     "machine_share": 0.0513,
+     "incidents_mean": 0.168
+    },
+    {
+     "lo": 350,
+     "hi": 600,
+     "n": 1578,
+     "riot_share": 0.0342,
+     "machine_share": 0.0387,
+     "incidents_mean": 0.053
+    }
+   ]
+  }
+ },
+ "london": {
+  "within100_share": 0.228,
+  "beyond200_share": 0.0578,
+  "within100_n": 2474,
+  "beyond200_n": 3167,
+  "within150_incident_share": 0.7126,
+  "within150_parish_share": 0.447,
+  "peak_band": {
+   "lo": 75,
+   "hi": 100,
+   "n": 1032,
+   "riot_share": 0.2374,
+   "machine_share": 0.062,
+   "incidents_mean": 0.616
+  }
+ },
+ "elham": {
+  "within50_share": 0.4035,
+  "within50_n": 285,
+  "within50_incidents_mean": 1.242
+ },
+ "outside": {
+  "close": {
+   "n": 4889,
+   "n_with": 233,
+   "with_share": 0.2489,
+   "without_share": 0.1501,
+   "gap": 0.0988,
+   "incidents_with": 0.524,
+   "incidents_without": 0.295
+  },
+  "distant": {
+   "n": 4785,
+   "n_with": 278,
+   "with_share": 0.2878,
+   "without_share": 0.1249,
+   "gap": 0.1629,
+   "incidents_with": 0.874,
+   "incidents_without": 0.274
+  },
+  "median_km": 73.5,
+  "median_km_all": 74.0,
+  "close_max_km": 74.0
+ },
+ "enclosure_split": {
+  "low": {
+   "n": 3365,
+   "riot_share": 0.1557,
+   "incidents_mean": 0.317
+  },
+  "high": {
+   "n": 3350,
+   "riot_share": 0.1776,
+   "incidents_mean": 0.373
+  }
+ },
+ "models": [
+  {
+   "name": "All parishes",
+   "n": 9674,
+   "r2": 0.077,
+   "mean_y": 0.1447,
+   "terms": {
+    "machine": {
+     "b": 0.078,
+     "se": 0.0196,
+     "p": 0.0001,
+     "sd": 0.2237,
+     "b_sd": 0.0174
+    },
+    "log_dist_london": {
+     "b": 0.0134,
+     "se": 0.0076,
+     "p": 0.0788,
+     "sd": 0.7088,
+     "b_sd": 0.0095
+    },
+    "log_density": {
+     "b": 0.04,
+     "se": 0.0047,
+     "p": 0.0,
+     "sd": 0.962,
+     "b_sd": 0.0384
+    },
+    "agri_share": {
+     "b": -0.0492,
+     "se": 0.0135,
+     "p": 0.0003,
+     "sd": 0.2654,
+     "b_sd": -0.0131
+    }
+   }
+  },
+  {
+   "name": "With enclosure",
+   "n": 6715,
+   "r2": 0.064,
+   "mean_y": 0.1666,
+   "terms": {
+    "machine": {
+     "b": 0.0939,
+     "se": 0.0237,
+     "p": 0.0001,
+     "sd": 0.2319,
+     "b_sd": 0.0218
+    },
+    "log_dist_london": {
+     "b": -0.0053,
+     "se": 0.0113,
+     "p": 0.6401,
+     "sd": 0.5255,
+     "b_sd": -0.0028
+    },
+    "log_density": {
+     "b": 0.0705,
+     "se": 0.007,
+     "p": 0.0,
+     "sd": 0.7809,
+     "b_sd": 0.055
+    },
+    "agri_share": {
+     "b": -0.0205,
+     "se": 0.0173,
+     "p": 0.2373,
+     "sd": 0.2666,
+     "b_sd": -0.0055
+    },
+    "enclosures": {
+     "b": 0.0024,
+     "se": 0.0012,
+     "p": 0.0515,
+     "sd": 4.0552,
+     "b_sd": 0.0097
+    }
+   }
+  },
+  {
+   "name": "With poor rates",
+   "n": 1251,
+   "r2": 0.126,
+   "mean_y": 0.2198,
+   "terms": {
+    "machine": {
+     "b": 0.054,
+     "se": 0.0473,
+     "p": 0.2533,
+     "sd": 0.265,
+     "b_sd": 0.0143
+    },
+    "log_dist_london": {
+     "b": -0.0564,
+     "se": 0.0287,
+     "p": 0.0497,
+     "sd": 0.7028,
+     "b_sd": -0.0396
+    },
+    "log_density": {
+     "b": 0.0772,
+     "se": 0.0169,
+     "p": 0.0,
+     "sd": 0.7937,
+     "b_sd": 0.0613
+    },
+    "agri_share": {
+     "b": -0.0745,
+     "se": 0.0453,
+     "p": 0.1002,
+     "sd": 0.2509,
+     "b_sd": -0.0187
+    },
+    "GENER_P01": {
+     "b": 0.0873,
+     "se": 0.0351,
+     "p": 0.0129,
+     "sd": 0.4218,
+     "b_sd": 0.0368
+    }
+   }
+  },
+  {
+   "name": "With 1834 winter unemployment",
+   "n": 595,
+   "r2": 0.113,
+   "mean_y": 0.2555,
+   "terms": {
+    "machine": {
+     "b": -0.003,
+     "se": 0.0637,
+     "p": 0.9628,
+     "sd": 0.2802,
+     "b_sd": -0.0008
+    },
+    "log_dist_london": {
+     "b": -0.0557,
+     "se": 0.037,
+     "p": 0.1329,
+     "sd": 0.7546,
+     "b_sd": -0.042
+    },
+    "log_density": {
+     "b": 0.0354,
+     "se": 0.0271,
+     "p": 0.1913,
+     "sd": 0.7123,
+     "b_sd": 0.0252
+    },
+    "agri_share": {
+     "b": -0.0502,
+     "se": 0.073,
+     "p": 0.4916,
+     "sd": 0.2451,
+     "b_sd": -0.0123
+    },
+    "u_w": {
+     "b": 0.2943,
+     "se": 0.1295,
+     "p": 0.0231,
+     "sd": 0.1507,
+     "b_sd": 0.0444
+    }
+   }
+  }
+ ],
+ "timeline": {
+  "years": [
+   1800,
+   1801,
+   1802,
+   1803,
+   1804,
+   1805,
+   1806,
+   1807,
+   1808,
+   1809,
+   1810,
+   1811,
+   1812,
+   1813,
+   1814,
+   1815,
+   1816,
+   1817,
+   1818,
+   1819,
+   1820,
+   1821,
+   1822,
+   1823,
+   1824,
+   1825,
+   1826,
+   1827,
+   1828,
+   1829,
+   1830
+  ],
+  "machines": [
+   32,
+   2,
+   2,
+   5,
+   5,
+   6,
+   11,
+   10,
+   44,
+   11,
+   68,
+   14,
+   16,
+   3,
+   38,
+   17,
+   10,
+   40,
+   33,
+   23,
+   33,
+   10,
+   31,
+   31,
+   52,
+   14,
+   22,
+   18,
+   16,
+   18,
+   8
+  ],
+  "machines_ads": [
+   1,
+   2,
+   2,
+   5,
+   5,
+   6,
+   11,
+   10,
+   44,
+   11,
+   4,
+   14,
+   16,
+   3,
+   38,
+   17,
+   10,
+   40,
+   33,
+   23,
+   33,
+   10,
+   31,
+   31,
+   52,
+   14,
+   22,
+   18,
+   16,
+   18,
+   8
+  ],
+  "cum": [
+   32,
+   34,
+   36,
+   41,
+   46,
+   52,
+   63,
+   73,
+   117,
+   128,
+   196,
+   210,
+   226,
+   229,
+   267,
+   284,
+   294,
+   334,
+   367,
+   390,
+   423,
+   433,
+   464,
+   495,
+   547,
+   561,
+   583,
+   601,
+   617,
+   635,
+   643
+  ],
+  "pre_years": [
+   1790,
+   1791,
+   1792,
+   1793,
+   1794,
+   1795,
+   1796,
+   1797,
+   1798,
+   1799,
+   1800,
+   1801,
+   1802,
+   1803,
+   1804,
+   1805,
+   1806,
+   1807,
+   1808,
+   1809,
+   1810,
+   1811,
+   1812,
+   1813,
+   1814,
+   1815,
+   1816,
+   1817,
+   1818,
+   1819,
+   1820,
+   1821,
+   1822,
+   1823,
+   1824,
+   1825,
+   1826,
+   1827,
+   1828,
+   1829
+  ],
+  "pre": [
+   0,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   5,
+   3,
+   2,
+   0,
+   0,
+   0,
+   1,
+   4,
+   5,
+   11,
+   2,
+   6,
+   6,
+   16,
+   21,
+   9,
+   12,
+   58,
+   16,
+   51,
+   42,
+   48,
+   15,
+   66,
+   35,
+   47,
+   188
+  ],
+  "pre_before1790": 6,
+  "pre_1820s": 566,
+  "pre_1820s_share": 0.8336,
+  "pre_peak_year": 1829,
+  "pre_peak": 188,
+  "machine_peak_year": 1810,
+  "machine_peak": 68,
+  "machines_by_decade": {
+   "1800s": 128,
+   "1810s": 262,
+   "1820s": 245
+  },
+  "machines_1830": 8,
+  "decade_labels": [
+   "before 1800",
+   "1800s",
+   "1810s",
+   "1820s",
+   "1830 to 1832"
+  ],
+  "decade_ratio_1830_1820": 3.2
+ },
+ "counties": {
+  "n": 54,
+  "n_big": 51,
+  "spearman": 0.448,
+  "spearman_p": 0.00099,
+  "top": [
+   {
+    "county": "Kent",
+    "parishes": 357,
+    "incidents": 430,
+    "riot_share": 0.381,
+    "machines": 6,
+    "machines_per100": 1.68
+   },
+   {
+    "county": "Norfolk",
+    "parishes": 627,
+    "incidents": 292,
+    "riot_share": 0.2648,
+    "machines": 71,
+    "machines_per100": 11.32
+   },
+   {
+    "county": "Wiltshire",
+    "parishes": 260,
+    "incidents": 248,
+    "riot_share": 0.3615,
+    "machines": 46,
+    "machines_per100": 17.69
+   },
+   {
+    "county": "Hampshire",
+    "parishes": 257,
+    "incidents": 235,
+    "riot_share": 0.3191,
+    "machines": 49,
+    "machines_per100": 19.07
+   },
+   {
+    "county": "Sussex",
+    "parishes": 279,
+    "incidents": 208,
+    "riot_share": 0.3011,
+    "machines": 11,
+    "machines_per100": 3.94
+   },
+   {
+    "county": "Berkshire",
+    "parishes": 143,
+    "incidents": 169,
+    "riot_share": 0.3636,
+    "machines": 18,
+    "machines_per100": 12.59
+   },
+   {
+    "county": "Suffolk",
+    "parishes": 445,
+    "incidents": 135,
+    "riot_share": 0.1618,
+    "machines": 65,
+    "machines_per100": 14.61
+   },
+   {
+    "county": "Lincolnshire",
+    "parishes": 531,
+    "incidents": 113,
+    "riot_share": 0.1281,
+    "machines": 13,
+    "machines_per100": 2.45
+   },
+   {
+    "county": "Buckinghamshire",
+    "parishes": 192,
+    "incidents": 83,
+    "riot_share": 0.1562,
+    "machines": 5,
+    "machines_per100": 2.6
+   },
+   {
+    "county": "Dorset",
+    "parishes": 245,
+    "incidents": 82,
+    "riot_share": 0.151,
+    "machines": 52,
+    "machines_per100": 21.22
+   }
+  ],
+  "top5_incident_share": 0.475,
+  "rows": [
+   {
+    "county": "Kent",
+    "region": "South-East",
+    "parishes": 357,
+    "incidents": 430,
+    "riot_share": 0.381,
+    "machines": 6,
+    "machines_per100": 1.68,
+    "attacks": 86
+   },
+   {
+    "county": "Norfolk",
+    "region": "South-East",
+    "parishes": 627,
+    "incidents": 292,
+    "riot_share": 0.2648,
+    "machines": 71,
+    "machines_per100": 11.32,
+    "attacks": 68
+   },
+   {
+    "county": "Wiltshire",
+    "region": "South-East",
+    "parishes": 260,
+    "incidents": 248,
+    "riot_share": 0.3615,
+    "machines": 46,
+    "machines_per100": 17.69,
+    "attacks": 76
+   },
+   {
+    "county": "Hampshire",
+    "region": "South-East",
+    "parishes": 257,
+    "incidents": 235,
+    "riot_share": 0.3191,
+    "machines": 49,
+    "machines_per100": 19.07,
+    "attacks": 56
+   },
+   {
+    "county": "Sussex",
+    "region": "South-East",
+    "parishes": 279,
+    "incidents": 208,
+    "riot_share": 0.3011,
+    "machines": 11,
+    "machines_per100": 3.94,
+    "attacks": 22
+   },
+   {
+    "county": "Berkshire",
+    "region": "South-East",
+    "parishes": 143,
+    "incidents": 169,
+    "riot_share": 0.3636,
+    "machines": 18,
+    "machines_per100": 12.59,
+    "attacks": 49
+   },
+   {
+    "county": "Suffolk",
+    "region": "South-East",
+    "parishes": 445,
+    "incidents": 135,
+    "riot_share": 0.1618,
+    "machines": 65,
+    "machines_per100": 14.61,
+    "attacks": 6
+   },
+   {
+    "county": "Lincolnshire",
+    "region": "North-East",
+    "parishes": 531,
+    "incidents": 113,
+    "riot_share": 0.1281,
+    "machines": 13,
+    "machines_per100": 2.45,
+    "attacks": 1
+   },
+   {
+    "county": "Buckinghamshire",
+    "region": "South-West",
+    "parishes": 192,
+    "incidents": 83,
+    "riot_share": 0.1562,
+    "machines": 5,
+    "machines_per100": 2.6,
+    "attacks": 24
+   },
+   {
+    "county": "Dorset",
+    "region": "South-East",
+    "parishes": 245,
+    "incidents": 82,
+    "riot_share": 0.151,
+    "machines": 52,
+    "machines_per100": 21.22,
+    "attacks": 22
+   },
+   {
+    "county": "Essex",
+    "region": "South-East",
+    "parishes": 376,
+    "incidents": 82,
+    "riot_share": 0.1489,
+    "machines": 13,
+    "machines_per100": 3.46,
+    "attacks": 13
+   },
+   {
+    "county": "Cambridgeshire",
+    "region": "South-East",
+    "parishes": 146,
+    "incidents": 80,
+    "riot_share": 0.274,
+    "machines": 25,
+    "machines_per100": 17.12,
+    "attacks": 5
+   },
+   {
+    "county": "Nottinghamshire",
+    "region": "North-West",
+    "parishes": 207,
+    "incidents": 71,
+    "riot_share": 0.2029,
+    "machines": 1,
+    "machines_per100": 0.48,
+    "attacks": 0
+   },
+   {
+    "county": "Gloucestershire",
+    "region": "South-West",
+    "parishes": 298,
+    "incidents": 60,
+    "riot_share": 0.1275,
+    "machines": 6,
+    "machines_per100": 2.01,
+    "attacks": 20
+   },
+   {
+    "county": "Surrey",
+    "region": "South-East",
+    "parishes": 132,
+    "incidents": 59,
+    "riot_share": 0.25,
+    "machines": 12,
+    "machines_per100": 9.09,
+    "attacks": 1
+   },
+   {
+    "county": "Oxfordshire",
+    "region": "South-West",
+    "parishes": 198,
+    "incidents": 50,
+    "riot_share": 0.1111,
+    "machines": 2,
+    "machines_per100": 1.01,
+    "attacks": 17
+   },
+   {
+    "county": "Somerset",
+    "region": "South-West",
+    "parishes": 446,
+    "incidents": 50,
+    "riot_share": 0.0673,
+    "machines": 22,
+    "machines_per100": 4.93,
+    "attacks": 7
+   },
+   {
+    "county": "Northamptonshire",
+    "region": "South-West",
+    "parishes": 284,
+    "incidents": 43,
+    "riot_share": 0.1162,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 8
+   },
+   {
+    "county": "Shropshire",
+    "region": "North-West",
+    "parishes": 209,
+    "incidents": 42,
+    "riot_share": 0.0526,
+    "machines": 1,
+    "machines_per100": 0.48,
+    "attacks": 0
+   },
+   {
+    "county": "Devon",
+    "region": "South-West",
+    "parishes": 432,
+    "incidents": 39,
+    "riot_share": 0.0602,
+    "machines": 35,
+    "machines_per100": 8.1,
+    "attacks": 1
+   },
+   {
+    "county": "Derbyshire",
+    "region": "North-West",
+    "parishes": 141,
+    "incidents": 36,
+    "riot_share": 0.1489,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 0
+   },
+   {
+    "county": "Huntingdonshire",
+    "region": "South-East",
+    "parishes": 91,
+    "incidents": 35,
+    "riot_share": 0.2198,
+    "machines": 4,
+    "machines_per100": 4.4,
+    "attacks": 18
+   },
+   {
+    "county": "Bedfordshire",
+    "region": "South-East",
+    "parishes": 120,
+    "incidents": 33,
+    "riot_share": 0.1833,
+    "machines": 12,
+    "machines_per100": 10.0,
+    "attacks": 0
+   },
+   {
+    "county": "Staffordshire",
+    "region": "North-West",
+    "parishes": 131,
+    "incidents": 32,
+    "riot_share": 0.1298,
+    "machines": 5,
+    "machines_per100": 3.82,
+    "attacks": 1
+   },
+   {
+    "county": "Yorkshire, West Riding",
+    "region": "North-West",
+    "parishes": 190,
+    "incidents": 32,
+    "riot_share": 0.1368,
+    "machines": 2,
+    "machines_per100": 1.05,
+    "attacks": 1
+   },
+   {
+    "county": "Hertfordshire",
+    "region": "South-East",
+    "parishes": 130,
+    "incidents": 27,
+    "riot_share": 0.1154,
+    "machines": 4,
+    "machines_per100": 3.08,
+    "attacks": 0
+   },
+   {
+    "county": "Middlesex",
+    "region": "South-East",
+    "parishes": 103,
+    "incidents": 25,
+    "riot_share": 0.1068,
+    "machines": 3,
+    "machines_per100": 2.91,
+    "attacks": 0
+   },
+   {
+    "county": "Yorkshire, East Riding",
+    "region": "North-East",
+    "parishes": 179,
+    "incidents": 24,
+    "riot_share": 0.0782,
+    "machines": 15,
+    "machines_per100": 8.38,
+    "attacks": 2
+   },
+   {
+    "county": "Leicestershire",
+    "region": "South-West",
+    "parishes": 220,
+    "incidents": 22,
+    "riot_share": 0.0591,
+    "machines": 2,
+    "machines_per100": 0.91,
+    "attacks": 0
+   },
+   {
+    "county": "Worcestershire",
+    "region": "South-West",
+    "parishes": 151,
+    "incidents": 20,
+    "riot_share": 0.0795,
+    "machines": 13,
+    "machines_per100": 8.61,
+    "attacks": 2
+   },
+   {
+    "county": "Cumberland",
+    "region": "North-West",
+    "parishes": 102,
+    "incidents": 19,
+    "riot_share": 0.049,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 0
+   },
+   {
+    "county": "Cheshire",
+    "region": "North-West",
+    "parishes": 85,
+    "incidents": 18,
+    "riot_share": 0.1294,
+    "machines": 11,
+    "machines_per100": 12.94,
+    "attacks": 0
+   },
+   {
+    "county": "Lancashire",
+    "region": "North-West",
+    "parishes": 76,
+    "incidents": 17,
+    "riot_share": 0.1579,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 0
+   },
+   {
+    "county": "Warwickshire",
+    "region": "South-West",
+    "parishes": 205,
+    "incidents": 14,
+    "riot_share": 0.0537,
+    "machines": 4,
+    "machines_per100": 1.95,
+    "attacks": 2
+   },
+   {
+    "county": "Yorkshire, North Riding",
+    "region": "North-East",
+    "parishes": 174,
+    "incidents": 12,
+    "riot_share": 0.0402,
+    "machines": 6,
+    "machines_per100": 3.45,
+    "attacks": 0
+   },
+   {
+    "county": "Cornwall",
+    "region": "South-West",
+    "parishes": 180,
+    "incidents": 12,
+    "riot_share": 0.0556,
+    "machines": 35,
+    "machines_per100": 19.44,
+    "attacks": 0
+   },
+   {
+    "county": "Monmouthshire",
+    "region": "Wales",
+    "parishes": 108,
+    "incidents": 9,
+    "riot_share": 0.0556,
+    "machines": 1,
+    "machines_per100": 0.93,
+    "attacks": 0
+   },
+   {
+    "county": "Herefordshire",
+    "region": "Wales",
+    "parishes": 212,
+    "incidents": 6,
+    "riot_share": 0.0189,
+    "machines": 12,
+    "machines_per100": 5.66,
+    "attacks": 0
+   },
+   {
+    "county": "Glamorganshire",
+    "region": "Wales",
+    "parishes": 102,
+    "incidents": 4,
+    "riot_share": 0.0392,
+    "machines": 2,
+    "machines_per100": 1.96,
+    "attacks": 0
+   },
+   {
+    "county": "Durham",
+    "region": "North-East",
+    "parishes": 71,
+    "incidents": 3,
+    "riot_share": 0.0423,
+    "machines": 7,
+    "machines_per100": 9.86,
+    "attacks": 0
+   },
+   {
+    "county": "Radnorshire",
+    "region": "Wales",
+    "parishes": 48,
+    "incidents": 2,
+    "riot_share": 0.0417,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 0
+   },
+   {
+    "county": "Northumberland",
+    "region": "North-East",
+    "parishes": 93,
+    "incidents": 1,
+    "riot_share": 0.0108,
+    "machines": 2,
+    "machines_per100": 2.15,
+    "attacks": 0
+   },
+   {
+    "county": "Rutland",
+    "region": "South-West",
+    "parishes": 53,
+    "incidents": 1,
+    "riot_share": 0.0189,
+    "machines": 1,
+    "machines_per100": 1.89,
+    "attacks": 0
+   },
+   {
+    "county": "Carnarvonshire",
+    "region": "Wales",
+    "parishes": 65,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 0
+   },
+   {
+    "county": "Anglesey",
+    "region": "Wales",
+    "parishes": 71,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 1,
+    "machines_per100": 1.41,
+    "attacks": 0
+   },
+   {
+    "county": "Brecknockshire",
+    "region": "Wales",
+    "parishes": 56,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 2,
+    "machines_per100": 3.57,
+    "attacks": 0
+   },
+   {
+    "county": "Flintshire",
+    "region": "Wales",
+    "parishes": 26,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 2,
+    "machines_per100": 7.69,
+    "attacks": 0
+   },
+   {
+    "county": "Carmarthenshire",
+    "region": "Wales",
+    "parishes": 68,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 0
+   },
+   {
+    "county": "Cardiganshire",
+    "region": "Wales",
+    "parishes": 56,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 1,
+    "machines_per100": 1.79,
+    "attacks": 0
+   },
+   {
+    "county": "Denbighshire",
+    "region": "Wales",
+    "parishes": 53,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 1,
+    "machines_per100": 1.89,
+    "attacks": 0
+   },
+   {
+    "county": "Montgomeryshire",
+    "region": "Wales",
+    "parishes": 50,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 1,
+    "machines_per100": 2.0,
+    "attacks": 0
+   },
+   {
+    "county": "Merionethshire",
+    "region": "Wales",
+    "parishes": 34,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 0
+   },
+   {
+    "county": "Pembrokeshire",
+    "region": "Wales",
+    "parishes": 134,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 0
+   },
+   {
+    "county": "Westmorland",
+    "region": "North-West",
+    "parishes": 32,
+    "incidents": 0,
+    "riot_share": 0.0,
+    "machines": 0,
+    "machines_per100": 0.0,
+    "attacks": 0
+   }
+  ]
+ },
+ "productivity": {
+  "flail": 0.4,
+  "by_power": {
+   "hand": {
+    "n": 1,
+    "mean": 0.4,
+    "median": 0.4
+   },
+   "horses": {
+    "n": 23,
+    "mean": 2.03,
+    "median": 1.62
+   },
+   "water": {
+    "n": 3,
+    "mean": 4.58,
+    "median": 5.0
+   },
+   "wind": {
+    "n": 1,
+    "mean": 12.0,
+    "median": 12.0
+   }
+  },
+  "horses_ratio": 5.1,
+  "horses_median_ratio": 4.0,
+  "n": 29,
+  "note": "Bushels threshed per worker-hour; women and children count as half a man, as in Caprettini and Voth's appendix code; flail benchmark 0.4 from their code (citing Gregory Clark).",
+  "rows": [
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 7.44
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 0.28
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 0.29
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 0.29
+   },
+   {
+    "power": "hand",
+    "bushels_per_worker_hour": 0.4
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 0.5
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 0.5
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 0.29
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 0.21
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 1.43
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 3.0
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 3.14
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 0.38
+   },
+   {
+    "power": "water",
+    "bushels_per_worker_hour": 5.0
+   },
+   {
+    "power": "wind",
+    "bushels_per_worker_hour": 12.0
+   },
+   {
+    "power": "water",
+    "bushels_per_worker_hour": 5.0
+   },
+   {
+    "power": "water",
+    "bushels_per_worker_hour": 3.75
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 1.62
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 3.43
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 2.86
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 2.05
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 0.3
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 1.34
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 2.4
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 6.67
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 2.67
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 2.0
+   },
+   {
+    "power": "horses",
+    "bushels_per_worker_hour": 3.56
+   },
+   {
+    "power": NaN,
+    "bushels_per_worker_hour": 1.5
+   }
+  ]
+ },
+ "context": {
+  "source": "Wikipedia, 'Swing Riots' and 'Threshing machine' (CC BY-SA 4.0), retrieved 28 October 2026",
+  "first_machine_date": "28 August 1830",
+  "first_machine_place": "Lower Hardres, Kent",
+  "tried": 2000,
+  "death_sentences": 252,
+  "hanged": 19,
+  "imprisoned": 644,
+  "transported": 481,
+  "threshing_labour_share": "about one quarter"
+ }
+}
