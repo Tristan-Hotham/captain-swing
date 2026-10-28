@@ -1,0 +1,157 @@
+<div class="credit">
+  <b>Built on someone else's careful work.</b> Every riot, machine and parish on this page comes from the open replication data of <a href="https://doi.org/10.1257/aeri.20190385">Bruno Caprettini and Hans-Joachim Voth (2020), "Rage against the Machines: Labor-Saving Technology and Unrest in Industrializing England"</a>, <i>American Economic Review: Insights</i> 2 (3): 305 to 320, released under CC BY 4.0 at <a href="https://doi.org/10.3886/E117044V1">openICPSR</a>. Their riot counts come in turn from the Swing Unmasked project (Holland 2005). The causal findings quoted below, including the heavy-soil test, are <b>theirs</b>. The maps, cross-tabulations, neighbour comparisons and the rest of the descriptive analysis are <b>mine</b>, and so are any mistakes. Section 07 lists exactly which is which.
+</div>
+
+<div class="stats">
+  <div><b class="h">{{counts.incidents_all|int}}</b><span>Swing incidents in {{counts.riot_parishes_all|int}} of {{counts.parishes_all|int}} parishes, 1830 to 1832</span></div>
+  <div><b class="s">{{machines.riot_share_with|pct0}} vs {{machines.riot_share_without|pct0}}</b><span>of parishes saw unrest, with and without a recorded threshing machine</span></div>
+  <div><b class="h">{{machines.riot_parishes_without_machine_share|pct0}}</b><span>of parishes with unrest had no machine on record at all</span></div>
+  <div><b class="g">{{gradients.enclosures.rows.0.riot_share|pct0}} to {{gradients.enclosures.rows.4.riot_share|pct0}}</b><span>unrest in the least and most enclosed fifths: enclosure barely matters</span></div>
+</div>
+
+<p class="lede">On the night of {{context.first_machine_date|raw}}, labourers at {{context.first_machine_place|raw}} broke a threshing machine. By December the trouble had spread across the south and east of England: machines smashed, ricks and barns set on fire, overseers of the poor carted out of their parishes, and threatening letters signed by a man who never existed, "Captain Swing". It was the largest rural uprising in nineteenth-century England, and the first great revolt of workers against a labour-saving machine.</p>
+<p>Historians have argued about it ever since. Was it about the threshing machine, which took away the winter work of beating corn with a flail? Or was it about hunger, low wages, the enclosure of common land and a harsh poor law, with the machine as just the most visible target? In 2020 the economists Bruno Caprettini and Hans-Joachim Voth mapped every Swing incident and every threshing machine they could find onto the {{counts.parishes_all|int}} parishes of 1851 England and Wales, and published all of it openly. I have used their data to draw the riots, the machines and the rival suspects side by side, and to ask the plain question: did the riots follow the machines?</p>
+<p>My short answer: yes, but not only. Parishes with a recorded machine were about twice as likely to riot, even compared with their own neighbours. Yet nine in ten riotous parishes had no recorded machine, enclosure explains almost nothing, and the parishes that spent most on poor relief were among the most rebellious. The machine was a spark, and the countryside was already dry.</p>
+
+<h2><span class="n">01 · The run-up</span>Machines arrive, then fires</h2>
+<p>Caprettini and Voth found threshing machines in two kinds of source: {{counts.machine_records_ads|int}} advertisements in provincial newspapers, mostly farm sales listing a machine among the stock, and {{counts.machine_records_gva|int}} machines described in the county <i>General View of Agriculture</i> surveys. Together they place {{counts.machines_all|int}} machines in {{counts.machine_parishes_all|int}} parishes before 1830. They also combed the newspapers for earlier unrest, finding {{counts.pre1830_episodes|int}} reports of rural arson and machine-breaking from {{counts.pre1830_first_year|raw}} to {{counts.pre1830_last_year|raw}}.</p>
+<div class="figure bleed">
+  <div class="fig-h">Machines on the farm sale lists, and a countryside that was already burning</div>
+  <div class="fig-sub">Top: threshing machines advertised in newspapers each year (blue). Bottom: arson and machine-breaking reported in newspapers each year before Swing (orange). Right: the average number of such incidents per parish in each decade, on Caprettini and Voth's harmonised panel. Hover or tap for values.</div>
+  <div class="chart" id="tl"></div>
+  <div class="src">Data: Caprettini and Voth (2020), from the British Newspaper Archive and the General Views of Agriculture. The {{counts.machine_records_gva|int}} survey machines are dated only to the decade, so they are left out of the yearly bars. Episodes before 1830 and Swing incidents come from different sources and are not directly comparable year by year; the decade panel puts them on one footing.</div>
+</div>
+<p>Two things stand out. Machines were spreading for thirty years before Swing: {{timeline.machines_by_decade.1800s|int}} recorded in the 1800s, {{timeline.machines_by_decade.1810s|int}} in the 1810s and {{timeline.machines_by_decade.1820s|int}} in the 1820s. And rural unrest was rising well before 1830: {{timeline.pre_1820s_share|pct0}} of the pre-Swing episodes fall in the 1820s, with {{timeline.pre_peak|int}} in {{timeline.pre_peak_year|raw}} alone. On the panel, the average parish saw {{repro.period_means.3|f3}} incidents in the 1820s and {{repro.period_means.4|f3}} in 1830 to 1832, {{timeline.decade_ratio_1830_1820|f1}} times as many. Swing was an explosion, but it did not come from nowhere.</p>
+
+<h2 id="mapsec"><span class="n">02 · The map</span>Every parish in England and Wales, 1830</h2>
+<p>Each shape is a parish of 1851. Colour it by Swing incidents, by machine-breaking, by recorded machines, or by the rival suspects. Press play to watch the recorded machines arrive year by year from 1800, with the newspaper reports of fires and machine-breaking flickering on, before Swing breaks out in 1830. Or type your own parish into the search box.</p>
+<div class="figure bleed">
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Colour parishes by">
+      <button class="btn" data-mm="swing" aria-pressed="true">Swing incidents</button><button class="btn" data-mm="attacks" aria-pressed="false">Machine-breaking</button><button class="btn" data-mm="machines" aria-pressed="false">Machines</button><button class="btn" data-mm="enclosures" aria-pressed="false">Enclosure</button><button class="btn" data-mm="poor" aria-pressed="false">Poor rates</button><button class="btn" data-mm="heavy" aria-pressed="false">Heavy soil</button>
+    </div>
+  </div>
+  <div class="slider">
+    <button class="btn" id="bplay">▶ Play 1800 to 1830</button>
+    <input type="range" id="yr" min="1800" max="1830" value="1830" aria-label="Year">
+    <span class="yr" id="yrl">All</span>
+    <button class="btn" id="ball">Show all</button>
+  </div>
+  <div class="mapgrid">
+    <div>
+      <div class="search"><input id="q" type="search" placeholder="Find a parish, e.g. Kintbury" autocomplete="off" aria-label="Find a parish"><div id="qres" class="qres"></div></div>
+      <div id="map" role="application" aria-label="Map of the parishes of England and Wales coloured by Swing riots, threshing machines and other measures"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="side">
+      <div class="count" id="mcount"></div>
+      <div class="card empty" id="card">Tap a parish to see its riots, machines and circumstances.</div>
+    </div>
+  </div>
+  <div class="src">Parish boundaries of 1851 and all values: Caprettini and Voth (2020), CC BY 4.0, simplified for the web. Swing incidents: Holland (2005), as matched to parishes by Caprettini and Voth. Machines: newspaper adverts and General Views of Agriculture, so a sample of machines, not a census. Enclosure is a district-level estimate from Gonner (1912) and is blank where he gives none; poor rates per head in 1801 exist only for the {{gradients.poor.n|int}} sample parishes that answered the 1834 Poor Law inquiry.</div>
+</div>
+<p>The fire map is unmistakable. Swing was above all a southern and eastern rising: Kent, Sussex, Hampshire, Berkshire and Wiltshire burn brightest, with a second front in Norfolk and Suffolk. Yet the single parish with most incidents in the data is {{top_parishes.0.parish|raw}} in {{top_parishes.0.county|raw}}, with {{top_parishes.0.incidents|int}}, followed by {{top_parishes.1.parish|raw}} ({{top_parishes.1.incidents|int}}) and {{top_parishes.2.parish|raw}} ({{top_parishes.2.incidents|int}}). Five counties, Kent, Norfolk, Wiltshire, Hampshire and Sussex, hold {{counties.top5_incident_share|pct0}} of all incidents in the main sample. Swing also reached further than its reputation: the North-West region, which includes Shropshire, Cheshire and Lancashire, still saw unrest in {{regions.1.riot_share|pct0}} of its parishes, against {{regions.0.riot_share|pct0}} in the South-East and {{regions.4.riot_share|pct1}} in Wales.</p>
+<p class="pull">The machine map is patchier, and that is a warning: these are the machines that happened to be advertised or described, not every machine that existed.</p>
+<p>Kent shows the problem best. Swing began there with a wave of machine-breaking, yet the data record only {{counties.top.0.machines|int}} machines in its {{counties.top.0.parishes|int}} parishes. Whatever the reason, perhaps that Kent's machines rarely appeared in the papers that were searched, the recorded machines are a thin sample. Any parish-level comparison of "machine" and "no machine" parishes therefore compares parishes with a <i>recorded</i> machine against a mix of parishes with none and parishes whose machine left no trace.</p>
+
+<h2><span class="n">03 · The machines</span>Did the riots follow the machines?</h2>
+<p>Start with the simplest comparison. Of the {{machines.n_with|int}} parishes in Caprettini and Voth's main sample with at least one recorded machine, {{machines.riot_share_with|pct1}} saw some Swing unrest. Of the {{machines.n_without|int}} without one, {{machines.riot_share_without|pct1}} did. That is {{machines.ratio|f1}} times the rate. Machine-breaking itself was {{machines.attack_ratio|f1}} times as common in machine parishes ({{machines.attack_share_with|pct1}} against {{machines.attack_share_without|pct1}}), which you would expect, but so were fires, letters and wage riots ({{machines.other_share_with|pct1}} against {{machines.other_share_without|pct1}}).</p>
+<div class="figure bleed">
+  <div class="fig-h">Share of parishes with any Swing unrest, with and without a recorded machine</div>
+  <div class="fig-sub">Orange: parishes with a recorded threshing machine before 1830. Grey: parishes without. The last row compares each machine parish with the machine-free parishes within {{neighbours.radius_km|int}} km of it.</div>
+  <div class="chart" id="mvr"></div>
+  <div class="src">Main sample of {{counts.parishes_sample|int}} parishes (Caprettini and Voth's sample flag). Regions are the five agricultural regions of Caird (1850 to 1851) used in their data. Neighbour interval: 95% bootstrap over machine parishes.</div>
+</div>
+<p>The obvious objection is geography. Machines were commonest in the corn-growing south and east, which is also where Swing was. So I compared within regions and, more strictly, with each machine parish's own neighbours. In {{machines.regions_higher_with|words}} of the five regions, machine parishes rioted more often (Wales, with {{regions.4.n_with|int}} machine parishes and almost no unrest, is the exception). Against the machine-free parishes within {{neighbours.radius_km|int}} km, on average {{neighbours.mean_neighbours|f1}} of them, machine parishes were {{neighbours.diff|pp1}} percentage points more likely to riot ({{neighbours.machine_riot_share|pct1}} against {{neighbours.neighbour_riot_share|pct1}}; 95% interval {{neighbours.ci_lo|pp1}} to {{neighbours.ci_hi|pp1}} points). A simple regression that also holds distance from London, population density, the farm share of workers and region constant gives a similar gap of {{models.0.terms.machine.b|pp1}} points (standard error {{models.0.terms.machine.se|pp1}}).</p>
+<p>So the riots did follow the machines. But look at it the other way round. Of the {{counts.riot_parishes_sample|int}} parishes in the main sample with any Swing unrest, {{machines.riot_parishes_without_machine_share|pct0}} had no recorded machine. And {{machines.machine_parishes_quiet_share|pct0}} of machine parishes stayed quiet. Machine-breaking was only {{counts.attack_share_of_incidents|pct0}} of all incidents; most were arson, threatening letters, wage riots and attacks on overseers and parsons.</p>
+<div class="note">
+  <h3>Their test, and why it is clever</h3>
+  <p>A raw gap can mislead: perhaps the farmers who bought machines were also the hardest employers. Caprettini and Voth use the soil. Threshing machines of the time worked badly on heavy clay land, which grew less wheat, so parishes on heavy soil adopted fewer machines for reasons that had nothing to do with local politics. In their data, a parish wholly on heavy soil had {{repro.fs_heavy|abs3}} fewer recorded machines and {{repro.rf_heavy|abs3}} fewer Swing incidents than one with none, other things equal. Their instrumental-variable estimate, which I reproduce exactly from their files, is that each extra machine caused about {{repro.iv7_thresh|f1}} more incidents (standard error {{repro.iv7_se|f1}}). That is their causal result, not mine; the size of the number partly reflects that the recorded machines stand for many unrecorded ones.</p>
+</div>
+
+<h2><span class="n">04 · The rival suspects</span>Hunger, wages, enclosure and the poor law</h2>
+<p>If the machines were only part of the story, what else lines up with the riots? The data hold several of the classic suspects, measured in different ways and for different sets of parishes. The chart lines them up: for each, the parishes are split into five equal groups (four for unemployment) from lowest to highest, and the dots show the share of each group that saw Swing unrest. A steep line means a strong association; a flat one means none.</p>
+<div class="figure bleed">
+  <div class="fig-h">Which suspects line up with the riots?</div>
+  <div class="fig-sub">Share of parishes with any Swing unrest, from the lowest fifth (left dot) to the highest fifth (right dot) of each measure. The bar on the right of each row is how many parishes have the measure. Hover or tap a dot.</div>
+  <div class="chart" id="grad"></div>
+  <div class="src">All measures from Caprettini and Voth's data: enclosure from Gonner (1912); poor rates per head in 1801 and winter unemployment in 1834 from the Poor Law Report of 1834; wheat prices at the nearest market town, 1821 to 1830, from Brunt and Cannon's corn returns; farm share of workers from the 1801 census; heavy soil from the British Geological Survey.</div>
+</div>
+<p><b>Enclosure</b> is the great surprise, or rather the great non-event. Across the five groups, from parishes in districts with no recorded enclosure of commons by 1820 to the most enclosed, the share with unrest moves only from {{gradients.enclosures.rows.0.riot_share|pct1}} to {{gradients.enclosures.rows.4.riot_share|pct1}}. This fits the old observation by the historian G. E. Mingay that the heavily enclosed Midlands stayed quiet in 1830. The measure is coarse (a district estimate scaled back to 1820), but there is no sign of a strong link.</p>
+<p><b>The poor law</b> is different. Among the {{gradients.poor.n|int}} parishes with figures, those that spent the least per head on poor relief in 1801 had unrest in {{gradients.poor.rows.0.riot_share|pct0}} of cases; those that spent the most, {{gradients.poor.rows.4.riot_share|pct0}}. In the south, poor relief often topped up low wages, so high rates mark places where farm wages were too low to live on. <b>Winter unemployment</b>, reported to the Poor Law inquiry in 1834, shows a similar rise, from {{gradients.unemp.rows.0.riot_share|pct0}} to {{gradients.unemp.rows.3.riot_share|pct0}}, in the {{gradients.unemp.n|int}} parishes that answered. Winter was exactly when hand threshing used to provide work. But this was measured after the riots, by parishes that chose to reply, so treat it as a clue, not a test.</p>
+<p><b>Hunger</b>, at least as measured by the price of wheat at the nearest market in the 1820s, shows no clear pattern (from {{gradients.wheat.rows.0.riot_share|pct0}} to {{gradients.wheat.rows.4.riot_share|pct0}}). The data hold no parish wages, so I cannot test wages directly; poor rates are the nearest proxy. Parishes where more of the workforce was on the land were, if anything, a little <i>less</i> likely to riot, and those on heavy clay, where machines were rarer, were less likely too.</p>
+<div class="tablewrap"><table class="t" id="mt"></table></div>
+<p class="src">Linear probability models of any Swing unrest (my own, not Caprettini and Voth's). Each column adds one rival suspect, on the parishes where it is measured. Coefficients in percentage points; for continuous suspects, per standard deviation. All include region dummies, log density, farm share and log distance from London. Robust standard errors in brackets.</p>
+<p>Put the suspects into one model and the machine gap holds in the full sample and the enclosure sample, while poor rates and winter unemployment carry their own weight in their smaller samples, where the machine gap is no longer precisely measured. The honest reading is that the machine mattered, and so did poverty, and the data cannot cleanly separate them outside the parishes where both are recorded.</p>
+
+<h2><span class="n">05 · The spread</span>From Elham outwards, and London's ring</h2>
+<p>The data carry no dates for individual Swing incidents, so I cannot animate the autumn of 1830 week by week. What they do carry is distance. Caprettini and Voth measure every parish's distance from Elham in East Kent, near where the first machines were broken, to capture how the movement spread from its starting point. Within 50 km of Elham, {{elham.within50_share|pct0}} of parishes saw unrest, averaging {{elham.within50_incidents_mean|f1}} incidents each.</p>
+<div class="figure bleed">
+  <div class="controls"><div class="seg" role="group" aria-label="Distance from"><button class="btn" data-dk="elham" aria-pressed="true">From Elham</button><button class="btn" data-dk="london" aria-pressed="false">From London</button></div></div>
+  <div class="fig-h">Unrest fades with distance</div>
+  <div class="fig-sub">Share of parishes with any Swing unrest (orange) and with a recorded machine (blue), in 25 km rings. Hover or tap for values.</div>
+  <div class="chart" id="dist"></div>
+  <div class="src">Distance from Elham: Caprettini and Voth. Distance from London: my calculation from each parish centroid to London as located in their newspaper-town file. Main sample.</div>
+</div>
+<p>London tells a cleaner story than Elham. Swing was a rising of the capital's agricultural hinterland: {{london.within100_share|pct0}} of parishes within 100 km of London saw unrest, against {{london.beyond200_share|pct1}} beyond 200 km. Parishes within 150 km of London are {{london.within150_parish_share|pct0}} of the sample but hold {{london.within150_incident_share|pct0}} of the incidents. Note the blue line: recorded machines do not fall away with distance in the same way, which is one more sign that machines alone do not explain where Swing struck.</p>
+<div class="figure bleed">
+  <div class="fig-h">County by county: machines and unrest</div>
+  <div class="fig-sub">Each circle is a county, sized by its number of parishes. Across the {{counties.n_big|int}} counties with at least 40 sample parishes, the rank correlation between machines per 100 parishes and the share of parishes with unrest is {{counties.spearman|f2}}.</div>
+  <div class="chart" id="cty"></div>
+  <div class="src">Main sample, aggregated by the county names in Caprettini and Voth's data. Full table in data/counties.csv.</div>
+</div>
+
+<h2 id="ai"><span class="n">06 · An aside</span>Robots took our jobs? What 1830 can and cannot tell us</h2>
+<div class="aside">
+<p class="tag">A light, clearly labelled detour. Everything here is about 1830; I make no claims about any modern technology's effects.</p>
+<p>The threshing machine is a lovely test case for a question we keep asking about labour-saving technology, from looms to software. Hand threshing with a flail was the great winter job of the farm year; by the eighteenth century it took {{context.threshing_labour_share|raw}} of agricultural labour, according to Wikipedia's summary of the history. A horse-driven machine did the same work far faster. Using the {{productivity.by_power.horses.n|int}} horse-powered machines with worker and output figures in the <i>General Views</i>, and Caprettini and Voth's benchmark of {{productivity.flail|f1}} bushels per man-hour with a flail, a horse machine threshed about {{productivity.by_power.horses.mean|f1}} bushels per worker-hour on average, roughly {{productivity.horses_ratio|f0}} times the flail.</p>
+<div class="figure">
+  <div class="chart" id="prod"></div>
+  <div class="src">Bushels threshed per worker-hour, counting women and children as half a man, as in Caprettini and Voth's appendix. Flail benchmark: their figure, citing Gregory Clark. Few machines, rough figures: read the order of magnitude, not the decimals.</div>
+</div>
+<p>So what does the first great "robots took our jobs" revolt tell us? Three things the data can support, and three it cannot.</p>
+<p><b>It can tell us that</b> people did respond to the machine where it arrived: parishes with a recorded machine rioted about twice as often, even against their neighbours. <b>It can tell us that</b> the response was sharpest where there was nowhere else to go. Far from the industrial towns (beyond about {{outside.median_km|f0}} km), machine parishes rioted {{outside.distant.gap|pp1}} points more often than machine-free ones; close to them, where a labourer might find other work, the gap was {{outside.close.gap|pp1}} points. Caprettini and Voth make the same point with their own models. <b>And it can tell us that</b> the machine landed on a population already squeezed: the riots tracked poverty and poor relief as well as machines, and most riotous parishes had no recorded machine at all.</p>
+<div class="figure">
+  <div class="chart" id="oo"></div>
+  <div class="src">Share of parishes with any Swing unrest, split at Caprettini and Voth's median distance to the nearest of 15 manufacturing towns.</div>
+</div>
+<p><b>It cannot tell us</b> what any modern technology will do: a threshing machine is not software, and an 1830 parish with no welfare state, no vote for labourers and no other employer for miles is not a modern labour market. <b>It cannot tell us</b> whether the machine made rural England poorer or richer in the long run; these data stop in 1832. <b>And it cannot tell us</b> whether the anger was about the machine itself or about who captured its gains; the rioters' own letters asked for higher wages as well as an end to machines.</p>
+<p>The fair lesson is modest. A labour-saving machine arriving in a place with few other jobs and a frayed safety net was associated with a sharp jump in unrest. The machine alone did not light the fire.</p>
+</div>
+
+<h2><span class="n">07 · Theirs and mine</span>What I reproduced, and what is new here</h2>
+<p>Before doing anything of my own, I checked that I could reproduce Caprettini and Voth's published numbers from the files they released. Every figure matches to the third decimal place.</p>
+<div class="tablewrap"><table class="t">
+<thead><tr><th>Their result (Caprettini and Voth 2020)</th><th class="num">Published</th><th class="num">My re-run</th></tr></thead>
+<tbody>
+<tr><td>Parishes in main sample</td><td class="num">{{repro.published.n|int}}</td><td class="num">{{repro.n|int}}</td></tr>
+<tr><td>Mean Swing incidents per parish</td><td class="num">{{repro.published.swing|f3}}</td><td class="num">{{repro.swing|f3}}</td></tr>
+<tr><td>Mean recorded threshing machines per parish</td><td class="num">{{repro.published.thresh|f3}}</td><td class="num">{{repro.thresh|f3}}</td></tr>
+<tr><td>Mean unrest episodes before 1830</td><td class="num">{{repro.published.preriots|f3}}</td><td class="num">{{repro.preriots|f3}}</td></tr>
+<tr><td>OLS: incidents per extra machine (s.e.)</td><td class="num">{{repro.published.ols1_thresh|f3}} ({{repro.published.ols1_se|f3}})</td><td class="num">{{repro.ols1_thresh|f3}} ({{repro.ols1_se|f3}})</td></tr>
+<tr><td>Heavy soil: effect on machines (first stage)</td><td class="num">{{repro.published.fs_heavy|f3}}</td><td class="num">{{repro.fs_heavy|f3}}</td></tr>
+<tr><td>Heavy soil: effect on incidents (reduced form)</td><td class="num">{{repro.published.rf_heavy|f3}}</td><td class="num">{{repro.rf_heavy|f3}}</td></tr>
+<tr><td>2SLS: incidents per extra machine (s.e.)</td><td class="num">{{repro.published.iv7_thresh|f3}} ({{repro.published.iv7_se|f3}})</td><td class="num">{{repro.iv7_thresh|f3}} ({{repro.iv7_se|f3}})</td></tr>
+<tr><td>Incidents per parish, 1820s and 1830 to 1832</td><td class="num">{{repro.published.period_means.3|f3}}, {{repro.published.period_means.4|f3}}</td><td class="num">{{repro.period_means.3|f3}}, {{repro.period_means.4|f3}}</td></tr>
+</tbody></table></div>
+<p>Everything else on this page is my own descriptive work on their data: the parish map and search, the machine and neighbour comparisons, the regional splits, the rival-suspect gradients and models, the distance-from-London rings, the county comparison, the productivity summary and the split by distance to industry (which echoes their own Figure 3). None of it is causal, and none of it should be read as theirs.</p>
+
+<h2><span class="n">08 · Methods</span>How I did this, and what to be careful of</h2>
+<p><b>Data.</b> I read Caprettini and Voth's parish cross-section ({{counts.parishes_all|int}} parishes of 1851), their decade panel, and their raw files of dated machine adverts, survey machines and pre-1830 unrest, all in place from their openICPSR package. I computed each parish's centroid from their 1851 boundary file and simplified the outlines for the web. Unless stated, comparisons use their main sample of {{counts.parishes_sample|int}} parishes, the set used in their tables, which leaves out parishes without complete 1801 census measures.</p>
+<p><b>Swing incidents.</b> Their riot counts come from Holland's <i>Swing Unmasked</i> (2005), matched to parishes by Caprettini and Voth; a small number of incidents could not be placed. An "incident" can be a fire, a broken machine, a threatening letter or a riot; counts are not people. "Any unrest" means at least one incident between August 1830 and 1832.</p>
+<p><b>Machines.</b> The machines are those advertised in the newspapers searched or described in the agricultural surveys. Many machines left no such trace (Kent is the clearest case), so "no recorded machine" does not mean "no machine". Errors of this kind tend to shrink simple comparisons towards zero, and an instrument such as their soil test is one way round them.</p>
+<p><b>Comparisons.</b> Neighbour comparisons use, for each machine parish, the share with unrest among machine-free sample parishes whose inside point lies within {{neighbours.radius_km|int}} km, with a bootstrap interval over machine parishes ({{neighbours.n_pairs|int}} of them). Quintile gradients split parishes into equal-sized groups by rank. The linear probability models are descriptive, with robust standard errors; they do not deal with the selection of parishes into the Poor Law returns, with reverse causation for the 1834 unemployment figures, or with unrecorded machines.</p>
+<p><b>Dates.</b> The Swing incidents in this package carry no dates, so the map cannot show the weekly spread of autumn 1830; the play button animates the dated machine adverts and pre-1830 reports instead. Survey machines are dated only to the decade.</p>
+
+<h2><span class="n">09 · Sources</span>Data and licences</h2>
+<ul>
+<li>Caprettini, Bruno, and Hans-Joachim Voth. 2020. "Rage against the Machines: Labor-Saving Technology and Unrest in Industrializing England." <i>American Economic Review: Insights</i> 2 (3): 305 to 320. <a href="https://doi.org/10.1257/aeri.20190385">doi.org/10.1257/aeri.20190385</a>.</li>
+<li>Caprettini, Bruno, and Hans-Joachim Voth. Replication data for "Rage against the Machines". Inter-university Consortium for Political and Social Research (openICPSR), project E117044, version V1. <a href="https://doi.org/10.3886/E117044V1">doi.org/10.3886/E117044V1</a>. CC BY 4.0. This includes their own compilations from the British Newspaper Archive, the county General Views of Agriculture, the Poor Law Report of 1834, Gonner (1912) on enclosure, the 1801 census, corn returns and 1851 parish boundaries; see their documentation for the original sources and licences.</li>
+<li>Holland, M. (ed.) 2005. <i>Swing Unmasked: The Agricultural Riots of 1830 to 1832 and their Wider Implications</i>. FACHRS Publications. The source of the riot counts, via Caprettini and Voth.</li>
+<li>Gonner, E. C. K. 1912. <i>Common Land and Inclosure</i>. London: Macmillan. Via Caprettini and Voth.</li>
+<li>Wikipedia, "Swing Riots" and "Threshing machine" (CC BY-SA 4.0), retrieved 28 October 2026, for the date and place of the first broken machine, the share of farm labour spent threshing, and the sentences: about {{context.tried|int}} tried, {{context.death_sentences|int}} sentenced to death, {{context.hanged|int}} hanged, {{context.imprisoned|int}} imprisoned and {{context.transported|int}} transported.</li>
+<li>Background: Hobsbawm, E. J. and Rudé, G. 1969. <i>Captain Swing</i>. London: Lawrence and Wishart.</li>
+</ul>
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.23727133">Read the paper</a><a href="https://github.com/Tristan-Hotham/captain-swing">Data and code</a><a href="https://blog.tristanhotham.com/2026/10/28/captain-swing/">Blog post</a><a href="https://blog.tristanhotham.com/">More data studies</a></div>
+<p style="font-size:16px;color:var(--muted)">Other history data studies: <a href="https://tristan-hotham.github.io/witch-hunts/">Cold Years, Witch Years?</a> · <a href="https://tristan-hotham.github.io/domesday-destiny/">Is Domesday destiny?</a> · <a href="https://tristan-hotham.github.io/within-sight/">Within Sight</a></p>
+<p class="closing">The men of 1830 lost: about {{context.tried|int}} were tried, {{context.hanged|int}} were hanged and {{context.transported|int}} transported to Australia. Their letters asked for work and a living wage as much as for the end of the machine. Two centuries on, when we argue about machines that might take our jobs, their story is less a prophecy than a reminder that how a new machine lands depends on what else people have to fall back on.</p>
